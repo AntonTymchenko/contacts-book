@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": "2b63b582-dbb0-433d-9a93-52d0c3e2ceca",
+      "name": "ivan singh",
+      "email": "mscm@mkm"
+    },
+    {
+      "id": "5e21ba33-8518-408c-9874-542f847dfc55",
+      "name": "anton singh",
+      "email": "mscm@mkm"
+    },
+    {
+      "id": "fcf0cd2c-cf34-4ca0-8411-7fb017e7704e",
+      "name": "fedia singh",
+      "email": "aeae@ulr.net"
+    }
+  ]
+}

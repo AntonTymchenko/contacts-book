@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const ContactCard = ({ contacts, clickHandler }) => {
   return (
     <>
-      {contacts &&
+      {contacts.length === 0 ? (
+        <p>No contacts available</p>
+      ) : (
         contacts.map((contact) => {
           return (
             <div className="item" key={contact.id}>
@@ -26,12 +28,28 @@ const ContactCard = ({ contacts, clickHandler }) => {
                 style={{
                   color: "red",
                   marginTop: "7px",
+                  marginLeft: "10px",
                 }}
                 onClick={() => clickHandler(contact.id)}
               ></i>
+              <Link
+                to={{
+                  pathname: `/edit`,
+                  state: { items: contact },
+                }}
+              >
+                <i
+                  className="edit alternate outline icon"
+                  style={{
+                    color: "blue",
+                    marginTop: "7px",
+                  }}
+                ></i>
+              </Link>
             </div>
           );
-        })}
+        })
+      )}
     </>
   );
 };
